@@ -14,7 +14,7 @@ services:
     name: my-nightscout-on-render
     env: node
     region: oregon # optional (defaults to oregon. Other regions: ohio, frankfurt, singapore)
-    plan: starter # optional (defaults to starter - this a PAID PLAN, $7/month. https://render.com/pricing)
+    plan: free # optional (defaults to starter - this a PAID PLAN, $7/month. https://render.com/pricing)
     buildCommand: npm install
     startCommand: npm start
     healthCheckPath: /
