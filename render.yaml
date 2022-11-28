@@ -11,7 +11,7 @@
 
 services:
   - type: web
-    name: my-nightscout-on-render
+    name: my-nightscout
     env: node
     region: oregon # optional (defaults to oregon. Other regions: ohio, frankfurt, singapore)
     plan: free # optional (defaults to starter - this a PAID PLAN, $7/month. https://render.com/pricing)
@@ -56,11 +56,11 @@ services:
       - key: BOLUS_RENDER_OVER # U value over which the bolus values are rendered on the chart if the 'x U and Over' option is selected.
         value: "1"
       - key: BRIDGE_PASSWORD # Your Dexcom account password, to receive CGM data from the Dexcom Share service. Also make sure to include 'bridge' in your ENABLE line.
-        value: ""
+        value: "g"
       - key: BRIDGE_SERVER # If you are bridging from the Dexcom Share service, and are anywhere *outside* the US, change this to EU. ('US' or 'EU')
         value: "EU"
       - key: BRIDGE_USER_NAME # Your Dexcom account username, to receive CGM data from the Dexcom Share service. Also make sure to include 'bridge' in your ENABLE line.
-        value: ""
+        value: "g"
       - key: CUSTOM_TITLE # The display name for the Nightscout site. Appears in the upper left of the main view. Often set to the name of the CGM wearer.
         value: "Nightscout"
       - key: DISPLAY_UNITS # Preferred BG units for the site: 'mg/dl' or 'mmol/L' (or just 'mmol').
@@ -68,13 +68,13 @@ services:
       - key: ENABLE # Plugins to enable for your site. Must be a space-delimited, lower-case list. Include the word 'bridge' here if you are receiving data from the Dexcom Share service. Include 'mmconnect' if you are bridging from the MiniMed CareLink service.
         value: "careportal basal dbsize rawbg iob maker cob bwp cage iage sage pushover treatmentnotify pump profile openaps bage override speech cors"
       - key: MMCONNECT_USER_NAME # Your CareLink account username, to receive CGM data from the CareLink service. Also make sure to include 'mmconnect' in your ENABLE line.
-        value: ""
+        value: "g"
       - key: MMCONNECT_PASSWORD # Your CareLink account password, to receive CGM data from the CareLink service. Also make sure to include 'mmconnect' in your ENABLE line.
-        value: ""
+        value: "g"
       - key: MMCONNECT_SERVER # If you are bridging from the CareLink service, and are anywhere *outside* the US, change this to EU. ('US' or 'EU')
         value: "EU"
       - key: NIGHT_MODE # Default setting for new browser views, for whether Night Mode should be enabled. ('on' or 'off')
-        value: off"
+        value: "off"
       - key: SHOW_PLUGINS # Default setting for whether or not these plugins are checked (active) by default, not merely enabled. Include plugins here as in the ENABLE line; space-separated and lower-case.
         value: "careportal dbize"
       - key: SHOW_RAWBG # Default setting for new browser views, for the display of raw CGM data (if available). ('always', 'never', or 'noise')
